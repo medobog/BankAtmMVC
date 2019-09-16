@@ -1,0 +1,42 @@
+﻿@model Bank.Models.Account
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Account</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.UserID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Created_at)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Created_at)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Updated_at)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Updated_at)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AccountID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
